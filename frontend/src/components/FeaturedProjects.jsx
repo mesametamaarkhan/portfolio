@@ -7,7 +7,7 @@ function FeaturedProjects() {
       title: "TalentHub",
       description: "TalentHub is a platform that connects developers with companies for freelance work and students with internship opportunities. It helps businesses find skilled tech talent while enabling professionals to showcase their expertise and gain experience.",
       image: talentHub,
-      link: "https://tech-destination-ydce.vercel.app/",
+      link: "#",
     },
   ]
 

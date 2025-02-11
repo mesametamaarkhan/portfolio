@@ -1,27 +1,53 @@
-import talentHub from "../assets/project1.png";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const allProjects = [
     {
-      title: "TalentHub",
+      title: "TechMart",
       description:
-        "TalentHub is a platform that connects developers with companies for freelance work and students with internship opportunities. It helps businesses find skilled tech talent while enabling professionals to showcase their expertise and gain experience.",
-      image: talentHub,
-      link: "#",
-      technologies: ["React", "Node.js"],
+        "TechMart is a modern eCommerce platform for laptops, built using the MERN stack (MongoDB, Express, React, Node.js). It offers a seamless shopping experience with features like user authentication, product browsing, secure checkout, and order management. With a responsive design and real-time updates, TechMart ensures a smooth and efficient shopping journey for tech enthusiasts. 🚀",
+      image: 'https://imgur.com/BXvyTaC.png',
+      link: "/project-demo",
+      liveUrl: "https://tech-mart-m92x.vercel.app/",
+      video: "https://www.youtube.com/watch?v=noJfvPoP5ks",
+      technologies: ["React", "Node.js", "Express", "MongoDB"],
+      fullDescription: `
+        TechMart is an innovative eCommerce solution tailored for tech enthusiasts...
+      `,
+    },
+    {
+      title: "Flex Trainer",
+      description:
+        "Flex Trainer is a gym management system built using C#, Windows Forms, and SQL, designed to streamline member registration, workout tracking, payment management, and scheduling. With an intuitive interface and robust database integration, it simplifies gym operations, ensuring a seamless experience for both trainers and members. 💪🔥",
+      image: 'https://imgur.com/qsQmDIm.png',
+      liveUrl: "",
+      link: "/project-demo",
+      video: "https://www.example.com/demo-video2.mp4",
+      technologies: ["C#", "Windows Forms", "SQL"],
+    },
+    {
+      title: "Meteor Maverick",
+      description:
+        "Meteor Maverick is a fast-paced 2D space shooter built with C++ and SFML, featuring intense combat, dynamic enemy waves, and thrilling power-ups. Players navigate through asteroid fields and battle enemy ships, testing their reflexes and strategy in an action-packed arcade experience. 🚀✨",
+      image: "https://imgur.com/ARcDxZm.jpg",
+      link: "/project-demo",
+      liveUrl: "",
+      video: "https://www.example.com/meteor-maverick.mp4",
+      technologies: ["C++", "SFML"],
     },
   ];
 
   return (
-    <div className="bg-[#0a0a0a] min-h-screen text-white pt-24">
-      <div className="container mx-auto px-6 py-16">
+    <div className="bg-[#112240] min-h-screen text-white pt-24">
+      <div className="container mx-auto px-6 py-5">
         <h1 className="text-4xl font-bold mb-12">All Projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allProjects.map((project, index) => (
-            <a
-              href={project.link}
+            <Link
+              to={{ pathname: "/project-demo" }}
+              state={{ project }} // Pass project as state
               key={index}
-              className="block bg-[#112240] rounded-lg overflow-hidden hover:transform hover:-translate-y-2 transition-transform duration-300"
+              className="block bg-[#0a0a0a] rounded-lg overflow-hidden hover:transform hover:-translate-y-2 transition-transform duration-300"
             >
               <img
                 src={project.image}
@@ -42,7 +68,7 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

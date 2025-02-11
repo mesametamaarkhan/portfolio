@@ -1,6 +1,6 @@
 import pfp from '../assets/1730317412299.jpeg';
 
-function Hero() {
+const Hero = () => {
     return (
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12">

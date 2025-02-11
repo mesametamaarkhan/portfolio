@@ -1,7 +1,7 @@
 import Hero from '../components/Hero'
 import FeaturedProjects from '../components/FeaturedProjects'
 
-function Home() {
+const Home = () => {
   return (
     <div className="bg-[#0a0a0a] min-h-screen text-white">
       <Hero />
@@ -10,4 +10,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;

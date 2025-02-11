@@ -60,8 +60,6 @@ const ProjectDemo = () => {
               <ReactPlayer 
                 controls
                 url={project.video}
-                width="100%"
-                height="auto"
                 className="rounded-lg"
               />
             </div>

@@ -8,7 +8,7 @@ const FeaturedProjects = () => {
       image: 'https://imgur.com/BXvyTaC.png',
       link: "/project-demo",
       liveUrl: "https://tech-mart-m92x.vercel.app/",
-      video: "https://www.example.com/demo-video2.mp4",
+      video: "https://youtu.be/MOAAqzvBTfE",
       technologies: ["React", "Node.js", "Express", "MongoDB"],
     },
     {

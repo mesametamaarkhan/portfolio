@@ -17,7 +17,9 @@ const ProjectDemo = () => {
       <div className="container mx-auto py-16">
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center sm:text-left">{project.title}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-center sm:text-left">
+            {project.title}
+          </h1>
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -54,14 +56,18 @@ const ProjectDemo = () => {
             </div>
           </div>
 
-          {/* Video Section */}
+          {/* Video Section with Responsive Aspect Ratio */}
           <div className="bg-[#0a0a0a] rounded-lg p-6 flex justify-center">
-            <div className="w-full h-auto">
-              <ReactPlayer 
-                controls
-                url={project.video}
-                className="rounded-lg"
-              />
+            <div className="w-full max-w-4xl"> {/* Limit max width for large screens */}
+              <div className="relative pt-[56.25%]"> {/* Maintain 16:9 Aspect Ratio */}
+                <ReactPlayer
+                  url={project.video}
+                  controls
+                  width="100%"
+                  height="100%"
+                  className="absolute top-0 left-0 rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </div>

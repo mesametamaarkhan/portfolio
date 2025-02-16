@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const FeaturedProjects = () => {
   const featuredProjects = [
@@ -26,7 +27,12 @@ const FeaturedProjects = () => {
     <section id="projects" className="py-16 bg-[#112240]">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}  
+        >
           {featuredProjects.map((project, index) => (
             <Link
               to={{ pathname: "/project-demo" }}
@@ -55,15 +61,20 @@ const FeaturedProjects = () => {
               </div>
             </Link>
           ))}
-        </div>
-        <div className="text-center mt-12">
+        </motion.div>
+        <motion.div 
+          className="text-center mt-12"
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 1, delay: 1}}
+        >
           <Link 
             to="/projects"
             className="inline-block px-8 py-3 border-2 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 transition-colors rounded-lg"
           >
             View All Projects
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

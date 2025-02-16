@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 const ProjectDemo = () => {
   const location = useLocation();
@@ -18,16 +20,18 @@ const ProjectDemo = () => {
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
           <h1 className="text-3xl sm:text-4xl font-bold text-center sm:text-left">
-            {project.title}
+          <Typewriter words={[`${project.title}`]} loop={1} typeSpeed={50} />
           </h1>
           {project.liveUrl && (
-            <a
+            <motion.a
               href={project.liveUrl}
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 bg-[#64ffda] text-[#0a0a0a] rounded-lg font-semibold hover:bg-[#64ffda]/90 transition-colors text-sm sm:text-base"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
             >
               Visit Live Project <FaExternalLinkAlt />
-            </a>
+            </motion.a>
           )}
         </div>
 
@@ -35,13 +39,23 @@ const ProjectDemo = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             {/* Project Overview */}
-            <div className="bg-[#0a0a0a] rounded-lg p-6 mb-8">
+            <motion.div 
+              className="bg-[#0a0a0a] rounded-lg p-6 mb-8"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
               <h2 className="text-2xl font-bold mb-4">Project Overview</h2>
               <p className="text-gray-300">{project.description}</p>
-            </div>
+            </motion.div>
 
             {/* Technologies Used */}
-            <div className="bg-[#0a0a0a] rounded-lg p-6">
+            <motion.div 
+              className="bg-[#0a0a0a] rounded-lg p-6"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
               <h2 className="text-2xl font-bold mb-4">Technologies Used</h2>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, index) => (
@@ -53,11 +67,16 @@ const ProjectDemo = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Video Section with Responsive Aspect Ratio */}
-          <div className="bg-[#0a0a0a] rounded-lg p-6 flex justify-center">
+          <motion.div 
+            className="bg-[#0a0a0a] rounded-lg p-6 flex justify-center"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
             <div className="w-full max-w-4xl"> {/* Limit max width for large screens */}
               <div className="relative pt-[56.25%]"> {/* Maintain 16:9 Aspect Ratio */}
                 <ReactPlayer
@@ -69,7 +88,7 @@ const ProjectDemo = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

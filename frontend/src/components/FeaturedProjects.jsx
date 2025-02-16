@@ -14,7 +14,7 @@ const FeaturedProjects = () => {
     },
     {
       title: "Flex Trainer",
-      description: "Flex Trainer is a gym management system built using C#, Windows Forms, and SQL, designed to streamline member registration, workout tracking, payment management, and scheduling. With an intuitive interface and robust database integration, it simplifies gym operations, ensuring a seamless experience for both trainers and members. 💪🔥",
+      description: "Flex Trainer is a gym management system built with C#, Windows Forms, and SQL, designed to streamline member registration, workout tracking, payments, and scheduling. Featuring an intuitive interface and robust database integration, it simplifies gym operations, ensuring a seamless experience for trainers and members while improving efficiency, organization, and user satisfaction. 💪",
       image: 'https://imgur.com/qsQmDIm.png',
       liveUrl: "",
       link: "/project-demo",

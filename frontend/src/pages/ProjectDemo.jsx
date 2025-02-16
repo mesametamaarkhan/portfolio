@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -8,6 +9,10 @@ const ProjectDemo = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const project = location.state?.project;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   if (!project) {
     navigate("/projects");

@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from "framer-motion";
 
 const Projects = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   const allProjects = [
     {
       title: "TechMart",

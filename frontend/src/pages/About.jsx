@@ -1,7 +1,15 @@
+import { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import pfp from '../assets/1730317412299.jpeg';
 import { motion } from 'framer-motion';
 
 const About = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="bg-[#112240] min-h-screen text-white pt-24">
       <div className="container mx-auto px-6 py-16">

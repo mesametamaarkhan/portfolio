@@ -17,7 +17,6 @@ const ProjectDemo = () => {
   return (
     <div className="bg-[#112240] min-h-screen text-white pt-24 px-4 sm:px-6 lg:px-12">
       <div className="container mx-auto py-16">
-        {/* Header Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
           <h1 className="text-3xl sm:text-4xl font-bold text-center sm:text-left">
           <Typewriter words={[`${project.title}`]} loop={1} typeSpeed={50} />
@@ -35,10 +34,8 @@ const ProjectDemo = () => {
           )}
         </div>
 
-        {/* Main Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            {/* Project Overview */}
             <motion.div 
               className="bg-[#0a0a0a] rounded-lg p-6 mb-8"
               initial={{ opacity: 0, x: -20 }}
@@ -49,7 +46,6 @@ const ProjectDemo = () => {
               <p className="text-gray-300">{project.description}</p>
             </motion.div>
 
-            {/* Technologies Used */}
             <motion.div 
               className="bg-[#0a0a0a] rounded-lg p-6"
               initial={{ opacity: 0, x: -20 }}
@@ -70,15 +66,19 @@ const ProjectDemo = () => {
             </motion.div>
           </div>
 
-          {/* Video Section with Responsive Aspect Ratio */}
           <motion.div 
             className="bg-[#0a0a0a] rounded-lg p-6 flex justify-center"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <div className="w-full max-w-4xl"> {/* Limit max width for large screens */}
-              <div className="relative pt-[56.25%]"> {/* Maintain 16:9 Aspect Ratio */}
+            <div className="w-full max-w-4xl"> 
+              <motion.div 
+                className="relative pt-[56.25%]"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
                 <ReactPlayer
                   url={project.video}
                   controls
@@ -86,7 +86,7 @@ const ProjectDemo = () => {
                   height="100%"
                   className="absolute top-0 left-0 rounded-lg"
                 />
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

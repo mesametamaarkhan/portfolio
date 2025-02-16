@@ -22,16 +22,16 @@ const Hero = () => {
             className="text-xl text-gray-300 mb-8"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 1.5 }} // Delay until the name is fully typed
+            transition={{ duration: 1, delay: 1.5 }}
           >
-            <Typewriter words={["A passionate full-stack developer crafting beautiful and functional web experiences"]} loop={1} typeSpeed={30} />
+            A passionate full-stack developer crafting beautiful and functional web experiences
           </motion.p>
           <motion.a 
             href="#projects" 
             className="inline-block px-8 py-3 border-2 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 transition-colors rounded-lg"
             initial={{opacity: 0, y: 20}}
             animate={{opacity: 1, y: 0}}
-            transition={{duration: 1, delay: 3}}
+            transition={{duration: 1, delay: 2}}
           >
             View My Work
           </motion.a>

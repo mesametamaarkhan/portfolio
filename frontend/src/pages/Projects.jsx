@@ -31,7 +31,7 @@ const Projects = () => {
       image: 'https://imgur.com/qsQmDIm.png',
       liveUrl: "",
       link: "/project-demo",
-      video: "https://www.example.com/demo-video2.mp4",
+      video: "https://youtu.be/WxBmqZ7v8h4",
       technologies: ["C#", "Windows Forms", "SQL"],
     },
     {
@@ -41,7 +41,7 @@ const Projects = () => {
       image: "https://imgur.com/ARcDxZm.jpg",
       link: "/project-demo",
       liveUrl: "",
-      video: "https://www.example.com/meteor-maverick.mp4",
+      video: "https://youtube.com/shorts/7-5XivtXn8I?feature=share",
       technologies: ["C++", "SFML"],
     },
   ];

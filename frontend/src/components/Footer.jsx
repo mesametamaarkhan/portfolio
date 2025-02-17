@@ -9,14 +9,14 @@ const Footer = () => {
             I'll try my best to get back to you!
           </p>
           <a 
-            href="mailto:your.email@example.com" 
+            href="mailto:mesamtamaark@gmail.com" 
             className="inline-block px-8 py-3 border-2 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 transition-colors rounded-lg"
           >
             Say Hello
           </a>
         </div>
         <div className="mt-12 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Mesam E Tamaar Khan. All rights reserved.</p>
         </div>
       </div>
     </footer>
